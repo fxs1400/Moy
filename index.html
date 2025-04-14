@@ -27,16 +27,18 @@
 <a href="https://c64online.com/c64-online-emulator/">c64</a>
 <a href="https://www.scullinsteel.com/apple2/">apple ][</a>
 <a href="https://zx.researcher.su/en/">mz sepssey</a>
-<button onclick="hi()">share msg</button>
+
 <
 </form>
-  <a id="a" href="https://raw.githubusercontent.com/fxs1400/Post/refs/heads/main/Hi.txt">★المنشورات★</a> <p id="hi" action="https://raw.githubusercontent.com/fxs1400/Post/refs/heads/main/Hi.txt"></p>
+  <a id="a" onclick="hi()">★المنشورات★</a> <p id="hi" action="https://raw.githubusercontent.com/fxs1400/Post/refs/heads/main/Hi.txt"></p>
    <script>
+       function hi(){
     let hi = document.getElementById("hi");   fetch("https://raw.githubusercontent.com/fxs1400/Post/refs/heads/main/Hi.txt").then(function (respone) {
            return respone.text()
        }).then(function (data) {
-          hi.value = data ;
+        document.write(data);
        })
+       }
    </script>
    <style>
       body {
